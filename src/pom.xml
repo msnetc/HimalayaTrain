@@ -14,6 +14,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring.boot.dependencies.version>1.5.2.RELEASE</spring.boot.dependencies.version>
+        <guava.version>21.0</guava.version>
     </properties>
     
     <modules>
@@ -23,6 +24,15 @@
         <module>himalayatrain-manager</module>
         <module>himalayatrain-dao</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+    </dependencies>
 
 
 </project>

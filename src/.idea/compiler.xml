@@ -16,7 +16,7 @@
     <bytecodeTargetLevel>
       <module name="himalayatrain-api" target="1.5" />
       <module name="himalayatrain-dao" target="1.5" />
-      <module name="himalayatrain-host" target="1.8" />
+      <module name="himalayatrain-host" target="1.5" />
       <module name="himalayatrain-manager" target="1.5" />
       <module name="himalayatrain-model" target="1.5" />
       <module name="src" target="1.5" />
