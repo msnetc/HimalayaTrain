@@ -18,4 +18,11 @@ public class CityDao  implements ICityDao{
         return city;
     }
 
+    public int createCity(CityBo city) {
+        return this.sqlSession.insert("createCity", city);
+    }
+
+    public int modifyCity(CityBo city) {
+        return this.sqlSession.update("modifycity", city);
+    }
 }

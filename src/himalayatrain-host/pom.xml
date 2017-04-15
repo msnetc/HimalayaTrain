@@ -66,6 +66,13 @@
 
 
 
+		<!-- Spring Boot Mybatis 依赖 -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot}</version>
+		</dependency>
+
 		<!--log4j2 配置开始-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -83,7 +90,7 @@
 		</dependency>
 		<!--log4j2 配置结束-->
 
-
+		<!-- swagger 配置-->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -94,6 +101,12 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${swaggerui.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.mangofactory</groupId>
+			<artifactId>swagger-springmvc</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
 		<dependency>

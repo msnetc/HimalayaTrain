@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * log4j api:https://logging.apache.org/log4j/2.0/manual/api.html
  */
 @RestController
-@Api("hello相关api")
+@Api("hello every one ")
 public class HelloApi{
 
     private  final Logger logger = LogManager.getLogger(HelloApi.class);

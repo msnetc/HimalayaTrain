@@ -1,29 +1,21 @@
-package cn.mobilemd.himalayatrain.model.bo;
+package cn.mobilemd.himalayatrain.dto.citys;
 
 
-import java.io.Serializable;
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
-public class CityBo implements Serializable {
+@ApiModel("创建城市dto")
+public class CreateCity {
 
-    private static final long serialVersionUID = 1L;
-
-    private Long id;
-
+    @ApiModelProperty(value = "名称",required = true)
     private String name;
 
+    @ApiModelProperty(value = "省份",required = true)
     private String state;
 
+    @ApiModelProperty(value = "国家",required = true)
     private String country;
 
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -48,10 +40,4 @@ public class CityBo implements Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
-
-    @Override
-    public String toString() {
-        return getId() + "," + getName() + "," + getState() + "," + getCountry();
-    }
-
 }

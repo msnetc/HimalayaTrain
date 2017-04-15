@@ -1,11 +1,10 @@
 package cn.mobilemd.himalayatrain.api;
 
+import cn.mobilemd.himalayatrain.dto.citys.CreateCity;
 import cn.mobilemd.himalayatrain.dto.citys.GetCityResponse;
 import cn.mobilemd.himalayatrain.model.bo.CityBo;
 import cn.mobilemd.himalayatrain.service.ICityService;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +15,8 @@ public class CityApi {
     private ICityService cityService;
 
 
-    @RequestMapping(value="/city", method= RequestMethod.GET )
-    @ApiOperation(value="city", notes="获取某个城市信息")
+    @RequestMapping(value="/api/city/getcity", method= RequestMethod.GET )
+    @ApiOperation(value="获取某个城市信息")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType="query",name="id",dataType="Long",required=true,value="姓名",defaultValue="1")
     })
@@ -34,23 +33,24 @@ public class CityApi {
         return response;
     }
 
-//    @RequestMapping(value = "/api/city/{id}", method = RequestMethod.GET)
-//    public City findOneCity(@PathVariable("id") Long id) {
-//        return cityService.findCityById(id);
-//    }
-//
-//    @RequestMapping(value = "/api/city", method = RequestMethod.POST)
-//    public void createCity(@RequestBody City city) {
-//        cityService.saveCity(city);
-//    }
-//
-//    @RequestMapping(value = "/api/city", method = RequestMethod.PUT)
-//    public void modifyCity(@RequestBody City city) {
-//        cityService.updateCity(city);
-//    }
-//
-//    @RequestMapping(value = "/api/city/{id}", method = RequestMethod.DELETE)
-//    public void modifyCity(@PathVariable("id") Long id) {
-//        cityService.deleteCity(id);
-//    }
+    @RequestMapping(value = "/api/city/createcity", method = RequestMethod.POST)
+    @ApiOperation(value = "创建城市")
+    @ApiResponses(value = { @ApiResponse(code = 405, message = "invalid input") })
+    public int createCity(@RequestBody CreateCity city) {
+        CityBo item = cityDtoToBo(city);
+        int ret=cityService.createCity(item);
+        return ret;
+    }
+
+    /**
+     * 此方法可用mapper来解决
+     * */
+    private CityBo cityDtoToBo(CreateCity city){
+        CityBo item =new CityBo();
+        item.setName(city.getName());
+        item.setCountry(city.getCountry());
+        item.setState(city.getState());
+        return item;
+
+    }
 }
