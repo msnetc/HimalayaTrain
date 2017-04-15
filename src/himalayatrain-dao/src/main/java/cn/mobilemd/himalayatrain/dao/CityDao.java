@@ -14,7 +14,8 @@ public class CityDao  implements ICityDao{
     private SqlSession sqlSession;
 
     public CityBo getCity(long id) {
-        return this.sqlSession.selectOne("selectCityById", id);
+        CityBo city= this.sqlSession.selectOne("selectCityById", id);
+        return city;
     }
 
 }
