@@ -49,7 +49,7 @@ public class CityService  implements ICityService {
     }
 
     private String getCityKey(long id){
-        String key =String.format("tmtrain.city.%s", id);
+        String key =String.format("tmtrain.city.%d", id);
         return key;
     }
 }
