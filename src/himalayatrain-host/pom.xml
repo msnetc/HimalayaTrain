@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<artifactId>himalayatrain</artifactId>
+		<groupId>cn.mobilemd.himalayatrain</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.mobilemd.himalayatrain</groupId>
@@ -10,13 +17,6 @@
 
 	<name>himalayatrain-host</name>
 	<description>Demo project for Spring Boot</description>
-
-	<parent>
-		<artifactId>himalayatrain</artifactId>
-		<groupId>cn.mobilemd.himalayatrain</groupId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
-
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,6 +51,21 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--依赖于内部项目-->
+		<dependency>
+			<groupId>cn.mobilemd.himalayatrain</groupId>
+			<artifactId>himalayatrain-model</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.mobilemd.himalayatrain</groupId>
+			<artifactId>himalayatrain-service</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+
+
 		<!--log4j2 配置开始-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -79,6 +94,21 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${swaggerui.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

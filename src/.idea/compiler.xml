@@ -11,6 +11,7 @@
         <module name="himalayatrain-host" />
         <module name="himalayatrain-manager" />
         <module name="himalayatrain-model" />
+        <module name="himalayatrain-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,7 +20,9 @@
       <module name="himalayatrain-host" target="1.5" />
       <module name="himalayatrain-manager" target="1.5" />
       <module name="himalayatrain-model" target="1.5" />
+      <module name="himalayatrain-service" target="1.5" />
       <module name="src" target="1.5" />
+      <module name="temp" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

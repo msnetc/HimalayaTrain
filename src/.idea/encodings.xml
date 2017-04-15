@@ -5,8 +5,9 @@
     <file url="file://$PROJECT_DIR$/himalayatrain-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/himalayatrain-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/himalayatrain-host" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/himalayatrain-host" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/himalayatrain-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/himalayatrain-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/himalayatrain-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/temp" charset="UTF-8" />
   </component>
 </project>

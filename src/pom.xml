@@ -15,6 +15,7 @@
         <java.version>1.8</java.version>
         <spring.boot.dependencies.version>1.5.2.RELEASE</spring.boot.dependencies.version>
         <guava.version>21.0</guava.version>
+        <mybatis-spring-boot>1.3.0</mybatis-spring-boot>
     </properties>
     
     <modules>
@@ -23,6 +24,7 @@
         <module>himalayatrain-model</module>
         <module>himalayatrain-manager</module>
         <module>himalayatrain-dao</module>
+        <module>himalayatrain-service</module>
     </modules>
 
     <dependencies>
