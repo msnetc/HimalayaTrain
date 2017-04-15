@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-api/himalayatrain-api.iml" filepath="$PROJECT_DIR$/himalayatrain-api/himalayatrain-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-dao/himalayatrain-dao.iml" filepath="$PROJECT_DIR$/himalayatrain-dao/himalayatrain-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-host/himalayatrain-host.iml" filepath="$PROJECT_DIR$/himalayatrain-host/himalayatrain-host.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-manager/himalayatrain-manager.iml" filepath="$PROJECT_DIR$/himalayatrain-manager/himalayatrain-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-model/himalayatrain-model.iml" filepath="$PROJECT_DIR$/himalayatrain-model/himalayatrain-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src.iml" filepath="$PROJECT_DIR$/src.iml" />
+    </modules>
+  </component>
+</project>
