@@ -13,7 +13,7 @@
 
 
     <properties>
-        <spring-boot-starter-redis-version>1.3.2.RELEASE</spring-boot-starter-redis-version>
+
     </properties>
 
     <dependencies>

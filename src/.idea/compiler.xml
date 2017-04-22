@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="himalaya-dbexpand" />
         <module name="himalayatrain-api" />
         <module name="himalayatrain-dao" />
         <module name="himalayatrain-host" />
@@ -15,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="himalaya-dbexpand" target="1.5" />
       <module name="himalayatrain-api" target="1.5" />
       <module name="himalayatrain-dao" target="1.5" />
       <module name="himalayatrain-host" target="1.5" />

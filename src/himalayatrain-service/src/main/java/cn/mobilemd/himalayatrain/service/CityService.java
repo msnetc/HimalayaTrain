@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -26,17 +25,21 @@ public class CityService  implements ICityService {
 
     public CityBo getCity(long id) {
 
-        ValueOperations<String, CityBo> cityCacheOper = redisTemplate.opsForValue();
-        String key=getCityKey(id);
 
-        CityBo city = cityCacheOper.get(key);
-        if (city==null) {
-            city = cityDao.getCity(id);
-            if(city==null) return null;
-            cityCacheOper.set(key, city);
-            return city;
-        }
-        return city;
+        CityBo city1 = cityDao.getCity(id);
+        return city1;
+
+//        ValueOperations<String, CityBo> cityCacheOper = redisTemplate.opsForValue();
+//        String key=getCityKey(id);
+//
+//        CityBo city = cityCacheOper.get(key);
+//        if (city==null) {
+//            city = cityDao.getCity(id);
+//            if(city==null) return null;
+//            cityCacheOper.set(key, city);
+//            return city;
+//        }
+//        return city;
     }
 
     public int createCity(CityBo city) {
