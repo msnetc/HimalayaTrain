@@ -66,7 +66,9 @@
     </Appenders>
     <Loggers>
 
-        <Logger name="cn.mobilemd.himalayatrain.dao.mapper.CityMapper" level="DEBUG">
+        <!--mybatis query logging with log4j2.xml refer to
+        https://groups.google.com/forum/#!msg/mybatis-user/LGcc7yLa_cc/nic2-sACfawJ-->
+        <Logger name="cn.mobilemd.himalayatrain.dao.mapper" level="DEBUG">
             <Appender-ref level="INFO"  ref="RollingFileInfo"/>
             <Appender-ref level="DEBUG"  ref="RollingFileDebug"/>
             <Appender-ref level="ERROR"  ref="RollingFileError"/>
