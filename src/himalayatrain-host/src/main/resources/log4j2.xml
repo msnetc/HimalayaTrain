@@ -69,9 +69,7 @@
         <!--mybatis query logging with log4j2.xml refer to
         https://groups.google.com/forum/#!msg/mybatis-user/LGcc7yLa_cc/nic2-sACfawJ-->
         <Logger name="cn.mobilemd.himalayatrain.dao.mapper" level="DEBUG">
-            <Appender-ref level="INFO"  ref="RollingFileInfo"/>
             <Appender-ref level="DEBUG"  ref="RollingFileDebug"/>
-            <Appender-ref level="ERROR"  ref="RollingFileError"/>
         </Logger>
 
         <!--logger用于定义log的level以及所采用的appender，如果无需自定义，可以使用root解决，root标签是log的默认输出形式-->
@@ -81,7 +79,6 @@
             <!--appender-ref中的值必须是在前面定义的appenders-->
             <Appender-ref level="INFO" ref="ConsolePrint"/>
             <Appender-ref level="INFO"  ref="RollingFileInfo"/>
-            <Appender-ref level="DEBUG"  ref="RollingFileDebug"/>
             <Appender-ref level="ERROR"  ref="RollingFileError"/>
         </Root>
     </Loggers>
