@@ -65,6 +65,13 @@
         </RollingFile>
     </Appenders>
     <Loggers>
+
+        <Logger name="cn.mobilemd.himalayatrain.dao.mapper.CityMapper" level="DEBUG">
+            <Appender-ref level="INFO"  ref="RollingFileInfo"/>
+            <Appender-ref level="DEBUG"  ref="RollingFileDebug"/>
+            <Appender-ref level="ERROR"  ref="RollingFileError"/>
+        </Logger>
+
         <!--logger用于定义log的level以及所采用的appender，如果无需自定义，可以使用root解决，root标签是log的默认输出形式-->
         <!-- 级别顺序（低到高）：TRACE < DEBUG < INFO < WARN < ERROR < FATAL -->
         <Root level="INFO" includeLocation="true">
