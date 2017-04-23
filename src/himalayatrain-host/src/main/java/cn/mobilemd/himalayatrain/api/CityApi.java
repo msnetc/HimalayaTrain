@@ -5,6 +5,7 @@ import cn.mobilemd.himalayatrain.dto.citys.GetCityResponse;
 import cn.mobilemd.himalayatrain.model.bo.CityBo;
 import cn.mobilemd.himalayatrain.service.ICityService;
 import io.swagger.annotations.*;
+import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,8 @@ public class CityApi {
     @Autowired
     private ICityService cityService;
 
+    @Autowired
+    DozerBeanMapper mapper;
 
     @RequestMapping(value="/api/city/getcity", method= RequestMethod.GET )
     @ApiOperation(value="获取某个城市信息")
@@ -42,15 +45,9 @@ public class CityApi {
         return ret;
     }
 
-    /**
-     * 此方法可用mapper来解决
-     * */
     private CityBo cityDtoToBo(CreateCity city){
-        CityBo item =new CityBo();
-        item.setName(city.getName());
-        item.setCountry(city.getCountry());
-        item.setState(city.getState());
-        return item;
-
+        CityBo dest = mapper.map(city, CityBo.class);
+        return dest;
     }
+
 }
