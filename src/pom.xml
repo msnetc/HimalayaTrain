@@ -30,7 +30,6 @@
         <module>himalayatrain-businessmodel</module>
         <module>himalayaTrain-datamodel</module>
         <module>himalayatrain-datamodel</module>
-        <module>himalayatrain-servicemodel</module>
         <module>himalayatrain-dto</module>
     </modules>
 

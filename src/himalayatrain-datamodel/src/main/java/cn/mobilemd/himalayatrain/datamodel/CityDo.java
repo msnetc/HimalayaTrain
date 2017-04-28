@@ -1,11 +1,6 @@
-package cn.mobilemd.himalayatrain.businessmodel;
+package cn.mobilemd.himalayatrain.datamodel;
 
-
-import java.io.Serializable;
-
-public class CityBo implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class CityDo {
 
     private Long id;
 
@@ -52,5 +47,4 @@ public class CityBo implements Serializable {
     public String toString() {
         return getId() + "," + getName() + "," + getState() + "," + getCountry();
     }
-
 }
