@@ -1,7 +1,10 @@
-package cn.mobilemd.himalayatrain.dao.datamodel;
+package cn.mobilemd.himalayatrain.businessmodel;
 
 
-public class CityDo {
+import java.io.Serializable;
+
+public class CityBo implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     private Long id;
@@ -12,8 +15,10 @@ public class CityDo {
 
     private String country;
 
+
+
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Long id) {
@@ -21,7 +26,7 @@ public class CityDo {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -29,7 +34,7 @@ public class CityDo {
     }
 
     public String getState() {
-        return this.state;
+        return state;
     }
 
     public void setState(String state) {
@@ -37,7 +42,7 @@ public class CityDo {
     }
 
     public String getCountry() {
-        return this.country;
+        return country;
     }
 
     public void setCountry(String country) {
@@ -48,4 +53,5 @@ public class CityDo {
     public String toString() {
         return getId() + "," + getName() + "," + getState() + "," + getCountry();
     }
+
 }

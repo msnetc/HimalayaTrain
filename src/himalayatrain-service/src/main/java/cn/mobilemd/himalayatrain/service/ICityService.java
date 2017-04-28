@@ -1,6 +1,7 @@
 package cn.mobilemd.himalayatrain.service;
 
-import cn.mobilemd.himalayatrain.model.bo.CityBo;
+
+import cn.mobilemd.himalayatrain.businessmodel.CityBo;
 
 /**
  * Created by jerry on 2017/4/15.

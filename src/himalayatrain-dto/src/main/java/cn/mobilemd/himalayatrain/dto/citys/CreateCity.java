@@ -1,14 +1,12 @@
 package cn.mobilemd.himalayatrain.dto.citys;
 
-
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @ApiModel("创建城市dto")
 public class CreateCity {
-
     @ApiModelProperty(value = "名称",required = true)
-    private String name;
+private String name;
 
     @ApiModelProperty(value = "省份",required = true)
     private String state;

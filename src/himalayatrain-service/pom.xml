@@ -20,7 +20,7 @@
         <!--依赖于内部项目-->
         <dependency>
             <groupId>cn.mobilemd.himalayatrain</groupId>
-            <artifactId>himalayatrain-model</artifactId>
+            <artifactId>himalayatrain-businessmodel</artifactId>
             <version>${project.version}</version>
         </dependency>
 

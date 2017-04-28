@@ -7,22 +7,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="himalaya-dbexpand" />
-        <module name="himalayatrain-api" />
+        <module name="himalayatrain-businessmodel" />
         <module name="himalayatrain-dao" />
+        <module name="himalayatrain-datamodel" />
+        <module name="himalayatrain-dto" />
         <module name="himalayatrain-host" />
         <module name="himalayatrain-manager" />
-        <module name="himalayatrain-model" />
         <module name="himalayatrain-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="himalaya-dbexpand" target="1.8" />
       <module name="himalayatrain-api" target="1.8" />
+      <module name="himalayatrain-businessmodel" target="1.8" />
       <module name="himalayatrain-dao" target="1.8" />
+      <module name="HimalayaTrain-datamodel" target="1.8" />
+      <module name="himalayatrain-datamodel" target="1.8" />
+      <module name="himalayaTrain-datamodel" target="1.8" />
+      <module name="himalayatrain-dto" target="1.8" />
       <module name="himalayatrain-host" target="1.8" />
       <module name="himalayatrain-manager" target="1.8" />
       <module name="himalayatrain-model" target="1.8" />
       <module name="himalayatrain-service" target="1.8" />
+      <module name="himalayatrain-servicemodel" target="1.8" />
       <module name="src" target="1.5" />
       <module name="temp" target="1.5" />
     </bytecodeTargetLevel>

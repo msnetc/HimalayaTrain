@@ -1,4 +1,4 @@
-package cn.mobilemd.himalayatrain.swagger;
+package cn.mobilemd.himalayatrain.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

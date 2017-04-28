@@ -10,12 +10,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/himalayatrain-host/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/HimalayaTrain-datamodel/pom.xml" />
+        <option value="$PROJECT_DIR$/himalayaTrain-datamodel/pom.xml" />
         <option value="$PROJECT_DIR$/himalayatrain-api/pom.xml" />
+        <option value="$PROJECT_DIR$/himalayatrain-model/pom.xml" />
+        <option value="$PROJECT_DIR$/himalayatrain-servicemodel/pom.xml" />
         <option value="$PROJECT_DIR$/himalayatrain.api/pom.xml" />
         <option value="$PROJECT_DIR$/temp/pom.xml" />
       </set>

@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/himalaya-dbexpand/himalaya-dbexpand.iml" filepath="$PROJECT_DIR$/himalaya-dbexpand/himalaya-dbexpand.iml" />
-      <module fileurl="file://$PROJECT_DIR$/himalayatrain-api/himalayatrain-api.iml" filepath="$PROJECT_DIR$/himalayatrain-api/himalayatrain-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-businessmodel/himalayatrain-businessmodel.iml" filepath="$PROJECT_DIR$/himalayatrain-businessmodel/himalayatrain-businessmodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/himalayatrain-dao/himalayatrain-dao.iml" filepath="$PROJECT_DIR$/himalayatrain-dao/himalayatrain-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-datamodel/himalayatrain-datamodel.iml" filepath="$PROJECT_DIR$/himalayatrain-datamodel/himalayatrain-datamodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/himalayatrain-dto/himalayatrain-dto.iml" filepath="$PROJECT_DIR$/himalayatrain-dto/himalayatrain-dto.iml" />
       <module fileurl="file://$PROJECT_DIR$/himalayatrain-host/himalayatrain-host.iml" filepath="$PROJECT_DIR$/himalayatrain-host/himalayatrain-host.iml" />
       <module fileurl="file://$PROJECT_DIR$/himalayatrain-manager/himalayatrain-manager.iml" filepath="$PROJECT_DIR$/himalayatrain-manager/himalayatrain-manager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/himalayatrain-model/himalayatrain-model.iml" filepath="$PROJECT_DIR$/himalayatrain-model/himalayatrain-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/himalayatrain-service/himalayatrain-service.iml" filepath="$PROJECT_DIR$/himalayatrain-service/himalayatrain-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/src.iml" filepath="$PROJECT_DIR$/src.iml" />
     </modules>

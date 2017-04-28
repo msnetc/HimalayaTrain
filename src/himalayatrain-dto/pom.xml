@@ -9,7 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>himalayatrain-api</artifactId>
+    <artifactId>himalayatrain-dto</artifactId>
+    <properties>
+        <swaggerui.version>2.2.2</swaggerui.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.mangofactory</groupId>
+            <artifactId>swagger-springmvc</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

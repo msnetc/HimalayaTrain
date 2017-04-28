@@ -1,8 +1,8 @@
 package cn.mobilemd.himalayatrain.service;
 
 
+import cn.mobilemd.himalayatrain.businessmodel.CityBo;
 import cn.mobilemd.himalayatrain.dao.CityDao;
-import cn.mobilemd.himalayatrain.model.bo.CityBo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

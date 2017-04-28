@@ -23,12 +23,15 @@
     
     <modules>
         <module>himalayatrain-host</module>
-        <module>himalayatrain-api</module>
-        <module>himalayatrain-model</module>
         <module>himalayatrain-manager</module>
         <module>himalayatrain-dao</module>
         <module>himalayatrain-service</module>
         <module>himalaya-dbexpand</module>
+        <module>himalayatrain-businessmodel</module>
+        <module>himalayaTrain-datamodel</module>
+        <module>himalayatrain-datamodel</module>
+        <module>himalayatrain-servicemodel</module>
+        <module>himalayatrain-dto</module>
     </modules>
 
     <dependencies>

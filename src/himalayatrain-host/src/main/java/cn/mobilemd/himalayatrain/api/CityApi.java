@@ -1,8 +1,9 @@
 package cn.mobilemd.himalayatrain.api;
 
+import cn.mobilemd.himalayatrain.businessmodel.CityBo;
+import cn.mobilemd.himalayatrain.dto.citys.CityDto;
 import cn.mobilemd.himalayatrain.dto.citys.CreateCity;
 import cn.mobilemd.himalayatrain.dto.citys.GetCityResponse;
-import cn.mobilemd.himalayatrain.model.bo.CityBo;
 import cn.mobilemd.himalayatrain.service.ICityService;
 import io.swagger.annotations.*;
 import org.dozer.DozerBeanMapper;
@@ -26,8 +27,9 @@ public class CityApi {
     public GetCityResponse GetCity(@RequestParam(value = "id", required = true) Long id) {
         GetCityResponse response=new GetCityResponse();
         CityBo city = cityService.getCity(id);
+        CityDto cityDto=CityBoToDto(city);
         if(city !=null){
-            response.setData(city);
+            response.setData(cityDto);
             response.setCode(200);
             return response;
         };
@@ -47,6 +49,11 @@ public class CityApi {
 
     private CityBo cityDtoToBo(CreateCity city){
         CityBo dest = mapper.map(city, CityBo.class);
+        return dest;
+    }
+
+    private CityDto CityBoToDto(CityBo item){
+        CityDto dest = mapper.map(item, CityDto.class);
         return dest;
     }
 
