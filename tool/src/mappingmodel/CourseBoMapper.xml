@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="daomodel.CourseBoMapper">
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, EndCourseTypeId, BorderLine, 
+      SumScore, ValidDays, IsRelease, 
+      ReleaseTime, CreateTime, UpdateTime, 
+      CreateUserId, UpdateUserId, CompanyId
+      )
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{endcoursetypeid,jdbcType=INTEGER}, #{borderline,jdbcType=DECIMAL}, 
+      #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, #{isrelease,jdbcType=INTEGER}, 
+      #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, #{companyid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, EndCourseTypeId, BorderLine, 
+      SumScore, ValidDays, IsRelease, 
+      ReleaseTime, CreateTime, UpdateTime, 
+      CreateUserId, UpdateUserId, CompanyId
+      )
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{endcoursetypeid,jdbcType=INTEGER}, #{borderline,jdbcType=DECIMAL}, 
+      #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, #{isrelease,jdbcType=INTEGER}, 
+      #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, #{companyid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, EndCourseTypeId, BorderLine, 
+      SumScore, ValidDays, IsRelease, 
+      ReleaseTime, CreateTime, UpdateTime, 
+      CreateUserId, UpdateUserId, CompanyId
+      )
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{endcoursetypeid,jdbcType=INTEGER}, #{borderline,jdbcType=DECIMAL}, 
+      #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, #{isrelease,jdbcType=INTEGER}, 
+      #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, #{companyid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, EndCourseTypeId, BorderLine, 
+      SumScore, ValidDays, IsRelease, 
+      ReleaseTime, CreateTime, UpdateTime, 
+      CreateUserId, UpdateUserId, CompanyId
+      )
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{endcoursetypeid,jdbcType=INTEGER}, #{borderline,jdbcType=DECIMAL}, 
+      #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, #{isrelease,jdbcType=INTEGER}, 
+      #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, #{companyid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="BIGINT" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="CoursewareUpload" jdbcType="VARCHAR" property="coursewareupload" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, CoursewareUpload, EndCourseTypeId, 
+      BorderLine, SumScore, ValidDays, 
+      IsRelease, ReleaseTime, CreateTime, 
+      UpdateTime, CreateUserId, UpdateUserId, 
+      CompanyId)
+    values (#{id,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{coursewareupload,jdbcType=VARCHAR}, #{endcoursetypeid,jdbcType=INTEGER}, 
+      #{borderline,jdbcType=DECIMAL}, #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, 
+      #{isrelease,jdbcType=INTEGER}, #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP}, #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, 
+      #{companyid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="coursewareupload != null">
+        CoursewareUpload,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="coursewareupload != null">
+        #{coursewareupload,jdbcType=VARCHAR},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="CoursewareUpload" jdbcType="VARCHAR" property="coursewareupload" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, CoursewareUpload, EndCourseTypeId, 
+      BorderLine, SumScore, ValidDays, 
+      IsRelease, ReleaseTime, CreateTime, 
+      UpdateTime, CreateUserId, UpdateUserId, 
+      CompanyId)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{coursewareupload,jdbcType=VARCHAR}, #{endcoursetypeid,jdbcType=INTEGER}, 
+      #{borderline,jdbcType=DECIMAL}, #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, 
+      #{isrelease,jdbcType=INTEGER}, #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP}, #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, 
+      #{companyid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="coursewareupload != null">
+        CoursewareUpload,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="coursewareupload != null">
+        #{coursewareupload,jdbcType=VARCHAR},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, EndCourseTypeId, BorderLine, 
+      SumScore, ValidDays, IsRelease, 
+      ReleaseTime, CreateTime, UpdateTime, 
+      CreateUserId, UpdateUserId, CompanyId
+      )
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{endcoursetypeid,jdbcType=INTEGER}, #{borderline,jdbcType=DECIMAL}, 
+      #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, #{isrelease,jdbcType=INTEGER}, 
+      #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, #{companyid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="datamodel.CourseBo">
+    <result column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Code" jdbcType="VARCHAR" property="code" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="CourseCategoryId" jdbcType="INTEGER" property="coursecategoryid" />
+    <result column="TeachingWayId" jdbcType="INTEGER" property="teachingwayid" />
+    <result column="Discription" jdbcType="VARCHAR" property="discription" />
+    <result column="CourseLength" jdbcType="INTEGER" property="courselength" />
+    <result column="CoursewareUpload" jdbcType="VARCHAR" property="coursewareupload" />
+    <result column="EndCourseTypeId" jdbcType="INTEGER" property="endcoursetypeid" />
+    <result column="BorderLine" jdbcType="DECIMAL" property="borderline" />
+    <result column="SumScore" jdbcType="DECIMAL" property="sumscore" />
+    <result column="ValidDays" jdbcType="INTEGER" property="validdays" />
+    <result column="IsRelease" jdbcType="INTEGER" property="isrelease" />
+    <result column="ReleaseTime" jdbcType="TIMESTAMP" property="releasetime" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="CreateUserId" jdbcType="VARCHAR" property="createuserid" />
+    <result column="UpdateUserId" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="CompanyId" jdbcType="VARCHAR" property="companyid" />
+  </resultMap>
+  <insert id="insert" parameterType="datamodel.CourseBo">
+    insert into course (Id, Code, Name, 
+      CourseCategoryId, TeachingWayId, Discription, 
+      CourseLength, CoursewareUpload, EndCourseTypeId, 
+      BorderLine, SumScore, ValidDays, 
+      IsRelease, ReleaseTime, CreateTime, 
+      UpdateTime, CreateUserId, UpdateUserId, 
+      CompanyId)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coursecategoryid,jdbcType=INTEGER}, #{teachingwayid,jdbcType=INTEGER}, #{discription,jdbcType=VARCHAR}, 
+      #{courselength,jdbcType=INTEGER}, #{coursewareupload,jdbcType=VARCHAR}, #{endcoursetypeid,jdbcType=INTEGER}, 
+      #{borderline,jdbcType=DECIMAL}, #{sumscore,jdbcType=DECIMAL}, #{validdays,jdbcType=INTEGER}, 
+      #{isrelease,jdbcType=INTEGER}, #{releasetime,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{updatetime,jdbcType=TIMESTAMP}, #{createuserid,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, 
+      #{companyid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="datamodel.CourseBo">
+    insert into course
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="code != null">
+        Code,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="coursecategoryid != null">
+        CourseCategoryId,
+      </if>
+      <if test="teachingwayid != null">
+        TeachingWayId,
+      </if>
+      <if test="discription != null">
+        Discription,
+      </if>
+      <if test="courselength != null">
+        CourseLength,
+      </if>
+      <if test="coursewareupload != null">
+        CoursewareUpload,
+      </if>
+      <if test="endcoursetypeid != null">
+        EndCourseTypeId,
+      </if>
+      <if test="borderline != null">
+        BorderLine,
+      </if>
+      <if test="sumscore != null">
+        SumScore,
+      </if>
+      <if test="validdays != null">
+        ValidDays,
+      </if>
+      <if test="isrelease != null">
+        IsRelease,
+      </if>
+      <if test="releasetime != null">
+        ReleaseTime,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+      <if test="createuserid != null">
+        CreateUserId,
+      </if>
+      <if test="updateuserid != null">
+        UpdateUserId,
+      </if>
+      <if test="companyid != null">
+        CompanyId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="coursecategoryid != null">
+        #{coursecategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="teachingwayid != null">
+        #{teachingwayid,jdbcType=INTEGER},
+      </if>
+      <if test="discription != null">
+        #{discription,jdbcType=VARCHAR},
+      </if>
+      <if test="courselength != null">
+        #{courselength,jdbcType=INTEGER},
+      </if>
+      <if test="coursewareupload != null">
+        #{coursewareupload,jdbcType=VARCHAR},
+      </if>
+      <if test="endcoursetypeid != null">
+        #{endcoursetypeid,jdbcType=INTEGER},
+      </if>
+      <if test="borderline != null">
+        #{borderline,jdbcType=DECIMAL},
+      </if>
+      <if test="sumscore != null">
+        #{sumscore,jdbcType=DECIMAL},
+      </if>
+      <if test="validdays != null">
+        #{validdays,jdbcType=INTEGER},
+      </if>
+      <if test="isrelease != null">
+        #{isrelease,jdbcType=INTEGER},
+      </if>
+      <if test="releasetime != null">
+        #{releasetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="companyid != null">
+        #{companyid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
